@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+        <ImageView android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+
+            android:background="@android:color/holo_blue_dark" />
+
+        <RelativeLayout android:id="@+id/controls" android:layout_below="@id/image"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@android:color/holo_green_dark">
+
+        </RelativeLayout>
+        <com.fernandofgallego.fab_animation.FloatingActionButton
+        android:id="@+id/fab_1"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="32dp"
+        android:layout_alignBottom="@id/image"
+        android:layout_marginBottom="-32dp"
+        android:elevation="@dimen/fab_elevation"
+        android:background="@drawable/fab_background"
+        android:stateListAnimator="@animator/fab_anim">
+
+        <ImageView
+            android:layout_width="@dimen/fab_icon_size"
+            android:layout_height="@dimen/fab_icon_size"
+            android:src="@android:drawable/ic_media_play"
+            android:layout_gravity="center"
+            android:duplicateParentState="true"/>
+
+    </com.fernandofgallego.fab_animation.FloatingActionButton>
+    <RelativeLayout android:id="@+id/controls2" android:layout_below="@id/image"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_alignStart="@id/controls"
+        android:layout_alignBottom="@id/controls"
+        android:layout_alignEnd="@id/controls"
+
+        android:background="@color/fab_color_1"
+        android:visibility="invisible">
+
+    </RelativeLayout>
+
+        <LinearLayout android:id="@+id/current" android:orientation="horizontal" android:layout_below="@id/controls"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@android:color/holo_orange_dark">
+
+        </LinearLayout>
+
+
+
+
+</RelativeLayout>
